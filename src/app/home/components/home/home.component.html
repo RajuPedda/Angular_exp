@@ -1,0 +1,854 @@
+
+<div class="main-container sidebar-opened" ng-reflect-klass="main-container" ng-reflect-ng-class="[object Object]" ng-reflect-dir="ltr" dir="ltr">
+
+    <mat-drawer-container class="example-container" autosize style="width:100%; height:90vh;">
+
+      <!-- Side Navigation Start -->
+
+        <mat-drawer #drawer mode="side" opened="true" style="overflow:hidden; background:#455161; width:270px;" fxFlex.lt-md="56px" fxShow fxHide.lt-sm="true" fxHide.gt-sm="false">
+
+            <mat-nav-list class="mat-nav-list multi-icons" role="navigation" style="color:#ffffff;">
+                <mat-list>
+                    <mat-list-item disableRipple class="no-hover" matTooltip="Custom Dashboard" matTooltipPosition="after">
+                        <div class="saperator text-muted ng-star-inserted">
+                            <span fxShow fxHide.lt-md="true" fxHide.gt-md="false">CUSTOM DASHBOARD</span>
+                        </div>
+                        <span fxflex="" style="flex: 1 1 1e-9px; box-sizing: border-box;" ng-reflect-flex=""></span>
+                        <mat-icon class="mat-icon white-icon" role="img" aria-hidden="true" (click)="openDialog()">add_box</mat-icon>
+                    </mat-list-item>
+
+                    <mat-list-item role="listitem" matTooltip="Dashboard" matTooltipPosition="right">
+                        <mat-icon class="mat-icon white-icon left">home</mat-icon>
+                        <span>Dashboard </span> <span fxflex="" style="flex: 1 1 1e-9px; box-sizing: border-box;" ng-reflect-flex=""></span>
+                        <mat-icon class="dd-icon mat-icon white-icon" role="img" aria-hidden="true">keyboard_arrow_down</mat-icon>
+                    </mat-list-item>
+
+                    <mat-list-item style="height:18px;" disableRipple class="no-hover">
+                        <div class="saperator text-muted ng-star-inserted"></div>
+                    </mat-list-item>
+
+                    <mat-list-item disableRipple class="no-hover" fxShow fxHide.lt-md="true" fxHide.gt-md="false">
+                        <div class="saperator text-muted ng-star-inserted">
+                            <span>SYSTEM DASHBOARD</span>
+                        </div>
+                    </mat-list-item>
+
+                    <mat-list-item role="listitem" matTooltip="Sales" matTooltipPosition="right">
+                        <mat-icon class="mat-icon white-icon left">monetization_on</mat-icon>
+                        <span>Sales </span> <span fxflex="" style="flex: 1 1 1e-9px; box-sizing: border-box;" ng-reflect-flex=""></span>
+                        <mat-icon class="dd-icon mat-icon white-icon" role="img" aria-hidden="true">keyboard_arrow_down</mat-icon>
+                    </mat-list-item>
+
+                    <mat-list-item role="listitem" matTooltip="Opener" matTooltipPosition="right">
+                        <mat-icon class="mat-icon white-icon left">description</mat-icon>
+                        <span>Opener </span> <span fxflex="" style="flex: 1 1 1e-9px; box-sizing: border-box;" ng-reflect-flex=""></span>
+                        <mat-icon class="dd-icon mat-icon white-icon" role="img" aria-hidden="true">keyboard_arrow_down</mat-icon>
+                    </mat-list-item>
+
+                    <mat-list-item role="listitem" matTooltip="Info Manager" matTooltipPosition="right">
+                        <mat-icon class="mat-icon white-icon left">info</mat-icon>
+                        <span>Info Manager </span> <span fxflex="" style="flex: 1 1 1e-9px; box-sizing: border-box;" ng-reflect-flex=""></span>
+                        <mat-icon class="dd-icon mat-icon white-icon" role="img" aria-hidden="true">keyboard_arrow_down</mat-icon>
+                    </mat-list-item>
+
+                    <mat-list-item role="listitem" matTooltip="fieldOps" matTooltipPosition="right">
+                        <mat-icon class="mat-icon white-icon left">people</mat-icon>
+                        <span>Field Ops</span> <span fxflex="" style="flex: 1 1 1e-9px; box-sizing: border-box;" ng-reflect-flex=""></span>
+                        <mat-icon class="dd-icon mat-icon white-icon" role="img" aria-hidden="true">keyboard_arrow_down</mat-icon>
+                    </mat-list-item>
+
+                </mat-list>
+            </mat-nav-list>
+
+        </mat-drawer>
+
+
+
+         <!-- Side Navigation End -->
+
+     <div class="pageContent">
+
+      <!-- Page Header start -->
+
+        <div class="component-page-header">
+            <button mat-icon-button class="sidenav-toggle" (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                  </button>
+            <div class="docs-primary-name" fxLayout.lt-sm="column" fxLayout="row" fxLayoutGap="12px">
+                  <div fxFlex="80">
+                <h1 [ngStyle.lt-sm]="{'font-size.px': 35}">Dashboard </h1>
+                <span class="muted-text caption-18" [ngStyle.lt-sm]="{'font-size.px': 16}">Welcome to Franconnect Dashboard</span>
+                </div>
+                <div fxFlex="" class="mat-select-box padding-right">
+
+                      <mat-form-field>
+                              <mat-select [(value)]="selected" >
+                                <mat-option value="option1">Yesterday</mat-option>
+                                <mat-option value="option2">Last Week</mat-option>
+                                <mat-option value="option3">Last Month</mat-option>
+                                <mat-option value="option4">Last 3 Month</mat-option>
+                              </mat-select>
+                      </mat-form-field>
+
+                </div>
+            </div>
+
+            <div fxLayout="row" fxLayoutGap="12px">
+
+                <div fxFlex="">
+                    <button mat-raised-button color="primary" [ngClass.lt-sm]="'sm-button'" matTooltip="Add Widget" matTooltipPosition="after">
+                        <mat-icon>add</mat-icon><span [ngClass.lt-sm]="'sm-button-text-hide'">Add Widget</span>
+                      </button>
+                  </div>
+                <div fxFlex="">
+
+                 <button mat-icon-button [matMenuTriggerFor]="pageActionMenu">
+                        <mat-icon>more_horiz</mat-icon>
+                     </button>
+                       <mat-menu #pageActionMenu="matMenu">
+                        <button mat-menu-item>
+                             <span> Share this Dashboard</span>
+                        </button>
+                        <button mat-menu-item>
+                            <span> Set as default</span>
+                         </button>
+                         <button mat-menu-item>
+                          <span> Save as Favourite</span>
+                       </button>
+
+                      </mat-menu>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Page Header End -->
+
+        <div fxLayout.lt-sm="column" fxLayout.gt-sm="row" fxLayoutWrap fxLayoutGap="16px">
+              <div fxFlex.gt-md="50" fxFlex.lt-lg="50">
+
+                      <div fxLayout.lt-lg="column" fxLayout="row" fxLayoutWrap fxLayoutGap="16px">
+
+                              <mat-card fxFlex.gt-md="50" fxFlex.lt-lg="100">
+                                      <div class="mat-subheading-2">Leads</div>
+                                      <mat-card-content>
+                                          <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="center center">
+                                              <div fxFlex="" ><span class="mat-display-0">142,348</span></div>
+                                              <div fxLayoutAlign="center center">
+                                                <mat-icon class="green-icon">arrow_upwards</mat-icon>
+                                                <span class="mat-title no-margin green-text">15%</span>
+                                              </div>
+                                          </div>
+
+                                    </mat-card-content>
+                                    <mat-divider></mat-divider>
+                                      <mat-card-actions class="mat-select-box">
+                                              <mat-form-field class="no-border auto-width">
+                                                      <mat-select [(value)]="selected" >
+                                                        <mat-option value="option1">Last 7 Days</mat-option>
+                                                        <mat-option value="option2">Last Week</mat-option>
+                                                        <mat-option value="option3">Last Month</mat-option>
+                                                        <mat-option value="option4">Last 3 Month</mat-option>
+                                                      </mat-select>
+                                              </mat-form-field>
+                                      </mat-card-actions>
+                              </mat-card>
+
+                              <mat-card fxFlex.gt-md="50" fxFlex.lt-lg="100">
+                                          <div class="mat-subheading-2">Opportunities</div>
+                                          <mat-card-content>
+                                              <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="center center">
+                                                  <div fxFlex="" ><span class="mat-display-0">4,589                                                    </span></div>
+                                                  <div fxLayoutAlign="center center">
+                                                    <mat-icon class="green-icon">arrow_upwards</mat-icon>
+                                                    <span class="mat-title no-margin green-text">28%</span>
+                                                  </div>
+                                              </div>
+
+                                        </mat-card-content>
+                                        <mat-divider></mat-divider>
+                                        <mat-card-actions class="mat-select-box">
+                                              <mat-form-field class="no-border auto-width">
+                                                      <mat-select [(value)]="selected" >
+                                                        <mat-option value="option1">Last 7 Days</mat-option>
+                                                        <mat-option value="option2">Last Week</mat-option>
+                                                        <mat-option value="option3">Last Month</mat-option>
+                                                        <mat-option value="option4">Last 3 Month</mat-option>
+                                                      </mat-select>
+                                              </mat-form-field>
+                                      </mat-card-actions>
+                              </mat-card>
+
+                          </div>
+
+
+
+              </div>
+              <div fxFlex.gt-md="50" fxFlex.lt-lg="50">
+
+                      <div fxLayout.lt-lg="column" fxLayout="row" fxLayoutWrap fxLayoutGap="16px">
+
+                              <mat-card fxFlex.gt-md="50" fxFlex.lt-lg="100">
+                                      <div class="mat-subheading-2">Conversion rate</div>
+                                      <mat-card-content>
+                                          <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="center center">
+                                              <div fxFlex="" ><span class="mat-display-0">66.45</span></div>
+                                              <div fxLayoutAlign="center center">
+                                                <mat-icon class="red-icon">arrow_upwards</mat-icon>
+                                                <span class="mat-title no-margin red-text">15%</span>
+                                              </div>
+                                          </div>
+
+                                    </mat-card-content>
+                                    <mat-divider></mat-divider>
+                                    <mat-card-actions class="mat-select-box">
+                                          <mat-form-field class="no-border auto-width">
+                                                  <mat-select [(value)]="selected" >
+                                                    <mat-option value="option1">Last 7 Days</mat-option>
+                                                    <mat-option value="option2">Last Week</mat-option>
+                                                    <mat-option value="option3">Last Month</mat-option>
+                                                    <mat-option value="option4">Last 3 Month</mat-option>
+                                                  </mat-select>
+                                          </mat-form-field>
+                                  </mat-card-actions>
+                                    </mat-card>
+
+                                    <mat-card fxFlex.gt-md="50" fxFlex.lt-lg="100">
+                                          <div class="mat-subheading-2">Accounts</div>
+                                          <mat-card-content>
+                                              <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="center center">
+                                                  <div fxFlex="" ><span class="mat-display-0">93</span></div>
+                                                  <div fxLayoutAlign="center center">
+                                                    <mat-icon class="green-icon">arrow_upwards</mat-icon>
+                                                    <span class="mat-title no-margin green-text">32%</span>
+                                                  </div>
+                                              </div>
+
+                                        </mat-card-content>
+                                        <mat-divider></mat-divider>
+                                        <mat-card-actions class="mat-select-box">
+                                              <mat-form-field class="no-border auto-width">
+                                                      <mat-select [(value)]="selected" >
+                                                        <mat-option value="option1">Last 7 Days</mat-option>
+                                                        <mat-option value="option2">Last Week</mat-option>
+                                                        <mat-option value="option3">Last Month</mat-option>
+                                                        <mat-option value="option4">Last 3 Month</mat-option>
+                                                      </mat-select>
+                                              </mat-form-field>
+                                      </mat-card-actions>
+                                        </mat-card>
+                          </div>
+
+
+
+              </div>
+          </div>
+
+
+
+    <div fxLayout.lt-md="column" fxLayout.gt-md="row" fxLayoutGap="16px">
+
+        <!-- PIE CHART START-->
+
+        <mat-card fxFlex="33" >
+
+              <div *ngIf="editWidget">
+                      <mat-card-content class="mat-card-content" >
+
+                         <mat-tab-group class="demo-tab-group">
+
+                            <mat-tab label="Create New Report" class="mat-tab-label-active">
+                               <div class="demo-tab-content">
+                                  <div *ngIf="!showMessage">
+                                      <div fxLayout.gt-xs="row">
+                                      <div fxFlex="100" >
+                                          <mat-form-field>
+                                              <input matInput placeholder="Dashboard Name">
+                                          </mat-form-field>
+                                      </div>
+                                      </div>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tepor incididunt ut labore et dolore magna aliqua</p>
+                                      <div fxLayout.gt-xs="row">
+                                      <div fxFlex="100" >
+                                          <mat-form-field>
+                                              <input matInput placeholder="Description (Optional)">
+                                          </mat-form-field>
+                                      </div>
+                                      </div>
+                              </div>
+
+                               <div fxLayout.gt-xs="row"  *ngIf="showMessage">
+                                      <div fxFlex="100" align="center" style="padding:25px 0;">
+                                              The Create button leads you <br>to Jasper Adhoc Reports<br>and<br>Dashboard is added in left sliding panel
+                                      </div>
+                              </div>
+
+                               <div fxLayout.gt-xs="row"  *ngIf="!showMessage">
+                                          <div fxFlex="100" align="end">
+                                              <button mat-button (click)="editWidget=false;">Cancel</button>
+                                              <button mat-raised-button color="primary" (click)="showMessage=true;">Create</button>
+                                          </div>
+                                  </div>
+                               </div>
+                            </mat-tab>
+
+                            <mat-tab label="Select Report">
+                               <div class="demo-tab-content">
+                                  <div fxLayout.gt-xs="row">
+                                     <div fxFlex="100" >
+                                        <mat-form-field>
+                                           <input matInput placeholder="Dashboard Name">
+                                        </mat-form-field>
+                                     </div>
+                                  </div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tepor incididunt ut labore et dolore magna aliqua</p>
+                                  <div fxLayout.gt-xs="row">
+                                     <div fxFlex="100" >
+                                        <mat-form-field>
+                                           <input matInput placeholder="Description (Optional)">
+                                        </mat-form-field>
+                                     </div>
+                                  </div>
+                                  <div fxLayout.gt-xs="row">
+                                     <div fxFlex="100" >
+                                        <mat-form-field>
+                                           <mat-select placeholder="Choose Report(s)" [formControl]="toppings" multiple>
+                                              <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                                           </mat-select>
+                                        </mat-form-field>
+                                     </div>
+                                  </div>
+                                  <div fxLayout.gt-xs="row">
+                                          <div fxFlex="100" align="end">
+                                              <button mat-button (click)="editWidget=false;">Cancel</button>
+                                              <button mat-raised-button color="primary" (click)="editWidget=false;">Create</button>
+                                          </div>
+                                  </div>
+                               </div>
+                            </mat-tab>
+
+                         </mat-tab-group>
+
+                      </mat-card-content>
+
+
+                   </div>
+
+                  <div *ngIf="!editWidget">
+
+                  <mat-card-header>
+                      <mat-card-title class="">Pie Chart</mat-card-title>
+
+                      <button mat-icon-button>
+                          <mat-icon>zoom_out_map</mat-icon>
+                      </button>
+                      <button mat-icon-button [matMenuTriggerFor]="actionMenu">
+                          <mat-icon>settings</mat-icon>
+                      </button>
+                      <mat-menu #actionMenu="matMenu">
+                          <button mat-menu-item>
+                              <mat-icon>swap_vert</mat-icon>
+                              <span>Schedule on FTP</span>
+                          </button>
+                          <button mat-menu-item>
+                              <mat-icon>email</mat-icon>
+                              <span>Schedule on mail</span>
+                          </button>
+                          <button mat-menu-item>
+                              <mat-icon>image</mat-icon>
+                              <span>Save image</span>
+                          </button>
+                          <button mat-menu-item>
+                              <mat-icon>loop</mat-icon>
+                              <span>Reset zoom</span>
+                          </button>
+                          <button mat-menu-item>
+                              <mat-icon>zoom_in</mat-icon>
+                              <span>Data zoom</span>
+                          </button>
+                      </mat-menu>
+                      <button mat-icon-button (click)="editWidget=true;">
+                          <mat-icon>close</mat-icon>
+                      </button>
+                  </mat-card-header>
+
+                  <mat-card-content class="mat-card-content" >
+                      <img [src]="piechart" class="chart">
+                  </mat-card-content>
+
+                 <!--  <mat-card-actions align="end">
+                          <button mat-button (click)="editWidget=false;">Cancel test</button>
+                          <button mat-raised-button color="primary">Create</button>
+                  </mat-card-actions> -->
+
+              </div>
+         </mat-card>
+
+     <!-- PIE CHART END-->
+
+     <!-- BAR CHART START-->
+
+       <mat-card fxFlex="33" >
+            <mat-card-header>
+               <mat-card-title class="">Bar Chart</mat-card-title>
+               <!-- <mat-card-subtitle class="ellipsis">VSTNUMBER20987VSTNUMBE</mat-card-subtitle> -->
+               <button mat-icon-button>
+                  <mat-icon>zoom_out_map</mat-icon>
+               </button>
+               <button mat-icon-button>
+                  <mat-icon>settings</mat-icon>
+               </button>
+               <button mat-icon-button>
+                  <mat-icon>close</mat-icon>
+               </button>
+            </mat-card-header>
+            <mat-card-content class="mat-card-content" >
+               <img [src]="barchart" class="chart">
+            </mat-card-content>
+         </mat-card>
+
+         <!-- BAR CHART END-->
+
+         <!-- FUNNEL CHART START-->
+
+       <mat-card fxFlex="33" >
+            <mat-card-header>
+               <mat-card-title class="">Funnel Chart</mat-card-title>
+               <!-- <mat-card-subtitle class="ellipsis">VSTNUMBER20987VSTNUMBE</mat-card-subtitle> -->
+               <button mat-icon-button>
+                  <mat-icon>zoom_out_map</mat-icon>
+               </button>
+               <button mat-icon-button>
+                  <mat-icon>settings</mat-icon>
+               </button>
+               <button mat-icon-button>
+                  <mat-icon>close</mat-icon>
+               </button>
+            </mat-card-header>
+            <mat-card-content class="mat-card-content" >
+               <img [src]="funnel" class="chart">
+            </mat-card-content>
+         </mat-card>
+
+         <!-- FUNNEL CHART END-->
+
+    </div>
+    <div fxLayout.lt-md="column" fxLayout.gt-md="row" fxLayoutGap="16px">
+
+         <!-- LINE CHART START-->
+
+         <mat-card fxFlex="50" >
+            <mat-card-header>
+               <mat-card-title class="">Line Chart</mat-card-title>
+               <!-- <mat-card-subtitle class="ellipsis">VSTNUMBER20987VSTNUMBE</mat-card-subtitle> -->
+               <button mat-icon-button>
+                  <mat-icon>zoom_out_map</mat-icon>
+               </button>
+               <button mat-icon-button>
+                  <mat-icon>settings</mat-icon>
+               </button>
+               <button mat-icon-button>
+                  <mat-icon>close</mat-icon>
+               </button>
+            </mat-card-header>
+            <mat-card-content class="mat-card-content" >
+               <img [src]="linechart" class="chart">
+            </mat-card-content>
+         </mat-card>
+
+         <!-- LINE CHART END-->
+
+         <!-- BUBBLE CHART START-->
+
+       <mat-card fxFlex="50" >
+            <mat-card-header>
+               <mat-card-title class="">Bubble Chart</mat-card-title>
+               <!-- <mat-card-subtitle class="ellipsis">VSTNUMBER20987VSTNUMBE</mat-card-subtitle> -->
+               <button mat-icon-button>
+                  <mat-icon>zoom_out_map</mat-icon>
+               </button>
+               <button mat-icon-button>
+                  <mat-icon>settings</mat-icon>
+               </button>
+               <button mat-icon-button>
+                  <mat-icon>close</mat-icon>
+               </button>
+            </mat-card-header>
+            <mat-card-content class="mat-card-content" >
+               <img [src]="bubblechart" class="chart">
+            </mat-card-content>
+         </mat-card>
+
+
+         <!-- BUBBLE CHART END-->
+    </div>
+
+
+  <div fxLayout.lt-md="column" fxLayout.gt-md="row" fxLayoutGap="16px">
+         <mat-card fxFlex="100" >
+
+          <div fxLayout.lt-sm="column" fxLayout.gt-md="row" fxLayoutGap="16px">
+              <div fxFlex.gt-sm="50" fxFlex="60" >
+                  <mat-card-title class="no-margin">Welcome Back!</mat-card-title>
+                  <mat-card-subtitle class="ellipsis no-margin">Your portfolio has a growth in sales</mat-card-subtitle>
+              </div>
+              <div fxFlex="">
+                  <div class="mat-headline no-margin">-$3,300</div>
+                  <span class="mat-body-1 red-text">Yearly Growth</span>
+              </div>
+              <div fxFlex="">
+                      <div class="mat-headline no-margin">-$3,300</div>
+                      <span class="mat-body-1 red-text">Yearly Growth</span>
+                  </div>
+                  <div fxFlex="">
+                          <div class="mat-headline no-margin">-$3,300</div>
+                          <span class="mat-body-1 red-text">Yearly Growth</span>
+                  </div>
+         </div>
+
+         </mat-card>
+    </div>
+
+    <div fxLayout.lt-md="column" fxLayout.gt-md="row" fxLayoutGap="16px">
+
+          <!-- DATA START-->
+
+          <mat-card fxFlex="33" >
+
+                <div *ngIf="editWidget">
+                        <mat-card-content class="mat-card-content" >
+
+                           <mat-tab-group class="demo-tab-group">
+
+                              <mat-tab label="Create New Report" class="mat-tab-label-active">
+                                 <div class="demo-tab-content">
+                                    <div *ngIf="!showMessage">
+                                        <div fxLayout.gt-xs="row">
+                                        <div fxFlex="100" >
+                                            <mat-form-field>
+                                                <input matInput placeholder="Dashboard Name">
+                                            </mat-form-field>
+                                        </div>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tepor incididunt ut labore et dolore magna aliqua</p>
+                                        <div fxLayout.gt-xs="row">
+                                        <div fxFlex="100" >
+                                            <mat-form-field>
+                                                <input matInput placeholder="Description (Optional)">
+                                            </mat-form-field>
+                                        </div>
+                                        </div>
+                                </div>
+
+                                 <div fxLayout.gt-xs="row"  *ngIf="showMessage">
+                                        <div fxFlex="100" align="center" style="padding:25px 0;">
+                                                The Create button leads you <br>to Jasper Adhoc Reports<br>and<br>Dashboard is added in left sliding panel
+                                        </div>
+                                </div>
+
+                                 <div fxLayout.gt-xs="row"  *ngIf="!showMessage">
+                                            <div fxFlex="100" align="end">
+                                                <button mat-button (click)="editWidget=false;">Cancel</button>
+                                                <button mat-raised-button color="primary" (click)="showMessage=true;">Create</button>
+                                            </div>
+                                    </div>
+                                 </div>
+                              </mat-tab>
+
+                              <mat-tab label="Select Report">
+                                 <div class="demo-tab-content">
+                                    <div fxLayout.gt-xs="row">
+                                       <div fxFlex="100" >
+                                          <mat-form-field>
+                                             <input matInput placeholder="Dashboard Name">
+                                          </mat-form-field>
+                                       </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tepor incididunt ut labore et dolore magna aliqua</p>
+                                    <div fxLayout.gt-xs="row">
+                                       <div fxFlex="100" >
+                                          <mat-form-field>
+                                             <input matInput placeholder="Description (Optional)">
+                                          </mat-form-field>
+                                       </div>
+                                    </div>
+                                    <div fxLayout.gt-xs="row">
+                                       <div fxFlex="100" >
+                                          <mat-form-field>
+                                             <mat-select placeholder="Choose Report(s)" [formControl]="toppings" multiple>
+                                                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                                             </mat-select>
+                                          </mat-form-field>
+                                       </div>
+                                    </div>
+                                    <div fxLayout.gt-xs="row">
+                                            <div fxFlex="100" align="end">
+                                                <button mat-button (click)="editWidget=false;">Cancel</button>
+                                                <button mat-raised-button color="primary" (click)="editWidget=false;">Create</button>
+                                            </div>
+                                    </div>
+                                 </div>
+                              </mat-tab>
+
+                           </mat-tab-group>
+
+                        </mat-card-content>
+
+
+                     </div>
+
+                    <div *ngIf="!editWidget">
+
+                    <mat-card-header>
+                        <mat-card-title class="">Data</mat-card-title>
+
+                        <button mat-icon-button>
+                            <mat-icon>zoom_out_map</mat-icon>
+                        </button>
+                        <button mat-icon-button [matMenuTriggerFor]="actionMenu">
+                            <mat-icon>settings</mat-icon>
+                        </button>
+                        <mat-menu #actionMenu="matMenu">
+                            <button mat-menu-item>
+                                <mat-icon>swap_vert</mat-icon>
+                                <span>Schedule on FTP</span>
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>email</mat-icon>
+                                <span>Schedule on mail</span>
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>image</mat-icon>
+                                <span>Save image</span>
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>loop</mat-icon>
+                                <span>Reset zoom</span>
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>zoom_in</mat-icon>
+                                <span>Data zoom</span>
+                            </button>
+                        </mat-menu>
+                        <button mat-icon-button (click)="editWidget=true;">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-card-header>
+
+                    <mat-card-content class="mat-card-content" >
+                      <img [src]="barchart" class="chart">
+                    </mat-card-content>
+
+                   <!--  <mat-card-actions align="end">
+                            <button mat-button (click)="editWidget=false;">Cancel test</button>
+                            <button mat-raised-button color="primary">Create</button>
+                    </mat-card-actions> -->
+
+                </div>
+           </mat-card>
+
+       <!-- DATA END-->
+
+       <!-- ACTIVITY START-->
+
+         <mat-card fxFlex="33" >
+              <mat-card-header>
+                 <mat-card-title class="">Activity</mat-card-title>
+                 <!-- <mat-card-subtitle class="ellipsis">VSTNUMBER20987VSTNUMBE</mat-card-subtitle> -->
+                 <button mat-icon-button>
+                    <mat-icon>zoom_out_map</mat-icon>
+                 </button>
+                 <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
+                 </button>
+                 <button mat-icon-button>
+                    <mat-icon>close</mat-icon>
+                 </button>
+              </mat-card-header>
+              <mat-card-content>
+
+                  <mat-tab-group class="demo-tab-group">
+                    <mat-tab label="Activity">
+                      <div class="demo-tab-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                        Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                        In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+                        feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+                        orci enim rutrum enim, vel tempor sapien arcu a tellus.
+                      </div>
+                    </mat-tab>
+                    <mat-tab label="Blocked Users">
+                      <div class="demo-tab-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                        Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                        In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+                        feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+                        orci enim rutrum enim, vel tempor sapien arcu a tellus.
+                      </div>
+                    </mat-tab>
+
+                    <mat-tab label="NDAs">
+                      <div class="demo-tab-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                        Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                        In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+                        feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+                        orci enim rutrum enim, vel tempor sapien arcu a tellus.
+                        <br />
+                        <br />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                        Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                        In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+                        feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+                        orci enim rutrum enim, vel tempor sapien arcu a tellus.
+                      </div>
+                    </mat-tab>
+                    <mat-tab label="Customer Invoice">
+                      <div class="demo-tab-content">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+                          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+                          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+                          <br />
+                          <br />
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+                          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+                          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+                        </div>
+                    </mat-tab>
+
+                  </mat-tab-group>
+                </mat-card-content>
+           </mat-card>
+
+           <!-- ACTIVITY END-->
+
+           <!-- DONUT START-->
+
+         <mat-card fxFlex="33" >
+              <mat-card-header>
+                 <mat-card-title class="">Donut Chart</mat-card-title>
+                 <!-- <mat-card-subtitle class="ellipsis">VSTNUMBER20987VSTNUMBE</mat-card-subtitle> -->
+                 <button mat-icon-button>
+                    <mat-icon>zoom_out_map</mat-icon>
+                 </button>
+                 <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
+                 </button>
+                 <button mat-icon-button>
+                    <mat-icon>close</mat-icon>
+                 </button>
+              </mat-card-header>
+              <mat-card-content class="mat-card-content" >
+                 <img [src]="donut" class="chart">
+              </mat-card-content>
+           </mat-card>
+
+           <!-- DONUT CHART END-->
+
+      </div>
+
+      <div fxLayout.lt-md="column" fxLayout.gt-md="row" fxLayoutGap="16px">
+
+              <!-- Comparison graph START-->
+
+              <mat-card fxFlex="50" >
+                 <mat-card-header>
+                    <mat-card-title class="">Comparison graph</mat-card-title>
+                    <!-- <mat-card-subtitle class="ellipsis">VSTNUMBER20987VSTNUMBE</mat-card-subtitle> -->
+                    <button mat-icon-button>
+                       <mat-icon>zoom_out_map</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                       <mat-icon>settings</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                       <mat-icon>close</mat-icon>
+                    </button>
+                 </mat-card-header>
+                 <mat-card-content class="mat-card-content" >
+                    <img [src]="comparision" class="chart">
+                 </mat-card-content>
+              </mat-card>
+
+              <!-- Comparison graph END-->
+
+              <!-- USER SUMMARY START-->
+
+            <mat-card fxFlex="50" >
+                 <mat-card-header>
+                    <mat-card-title class="">User Summary</mat-card-title>
+                    <!-- <mat-card-subtitle class="ellipsis">VSTNUMBER20987VSTNUMBE</mat-card-subtitle> -->
+                    <button mat-icon-button>
+                       <mat-icon>zoom_out_map</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                       <mat-icon>settings</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                       <mat-icon>close</mat-icon>
+                    </button>
+                 </mat-card-header>
+                 <mat-card-content class="mat-card-content" >
+
+                      <mat-table #table [dataSource]="dataSource">
+
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="position">
+                          <mat-header-cell *matHeaderCellDef> Users </mat-header-cell>
+                          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+                        </ng-container>
+
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                          <mat-header-cell *matHeaderCellDef> Goals </mat-header-cell>
+                          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                        </ng-container>
+
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="weight">
+                          <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                          <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+                        </ng-container>
+
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="symbol">
+                          <mat-header-cell *matHeaderCellDef> Balance </mat-header-cell>
+                          <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+                        </ng-container>
+
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                      </mat-table>
+
+                      <mat-paginator #paginator
+                                     [pageSize]="5"
+                                     [pageSizeOptions]="[5, 10, 20]"
+                                     [showFirstLastButtons]="true">
+                      </mat-paginator>
+
+                 </mat-card-content>
+              </mat-card>
+
+
+              <!-- USER SUMMARY END-->
+         </div>
+
+
+    </div>
+
+    </mat-drawer-container>
+
+
+
+    </div>
+
+
+
+
+

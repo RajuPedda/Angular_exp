@@ -1,0 +1,63 @@
+<mat-dialog-content>
+                <mat-tab-group class="demo-tab-group">
+                   <mat-tab label="Create New Report">
+                      <div class="demo-tab-content">
+                         <div fxLayout.gt-xs="row"  fxLayoutGap="16px">
+                            <div fxFlex="100" >
+                               <mat-form-field>
+                                  <input matInput placeholder="Dashboard Name" [formControl]="email" required>
+                                  <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                               </mat-form-field>
+                            </div>
+                         </div>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tepor incididunt ut labore et dolore magna aliqua</p>
+                         <div fxLayout.gt-xs="row"  fxLayoutGap="16px">
+                            <div fxFlex="100" >
+                               <mat-form-field>
+                                  <input matInput placeholder="Description (Optional)">
+                               </mat-form-field>
+                            </div>
+                         </div>
+                      </div>
+                   </mat-tab>
+
+                   <mat-tab label="Select Report">
+                      <div class="demo-tab-content">
+                         <div fxLayout.gt-xs="row"  fxLayoutGap="16px">
+                            <div fxFlex="100" >
+                               <mat-form-field>
+                                  <input matInput placeholder="Dashboard Name" [formControl]="email" required>
+                                  <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                               </mat-form-field>
+                            </div>
+                         </div>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tepor incididunt ut labore et dolore magna aliqua</p>
+                         <div fxLayout.gt-xs="row"  fxLayoutGap="16px">
+                            <div fxFlex="100" >
+                               <mat-form-field>
+                                  <input matInput placeholder="Description (Optional)">
+                               </mat-form-field>
+                            </div>
+                         </div>
+                         <div fxLayout.gt-xs="row"  fxLayoutGap="16px">
+                                        <div fxFlex="100" >
+                                          
+                                           <mat-form-field>
+                                                        <mat-select placeholder="Choose Report(s)" [formControl]="toppings" multiple>
+                                                          <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                                                        </mat-select>
+                                           </mat-form-field>
+                                                      
+                                        </div>
+                                     </div>
+                      </div>
+                   </mat-tab>
+
+                </mat-tab-group>
+
+             </mat-dialog-content>
+
+             <mat-dialog-actions align="end">
+                <button mat-button [mat-dialog-close]="true">Cancel</button>
+                <button mat-raised-button color="primary">Create</button>
+             </mat-dialog-actions>

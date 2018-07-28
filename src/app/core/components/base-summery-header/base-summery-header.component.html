@@ -1,0 +1,38 @@
+<p fxFlex="auto" valign="center" fxLayout.gt-xs="row" fxLayout.xs="column" align="right" fxLayoutGap="8px">
+     <span>
+
+         <button mat-button [matMenuTriggerFor]="menu1" class="mat-button-outline"  color="primary">
+             <mat-icon>format_list_bulleted</mat-icon> List view
+             <mat-icon>expand_more</mat-icon>
+         </button>
+         <mat-menu #menu1="matMenu">
+             <button mat-menu-item>List view </button>
+             <button mat-menu-item>Timeline view</button>
+             <button mat-menu-item>Kanbon view</button>
+         </mat-menu>
+  </span>
+
+     <span>
+ <button mat-button [matMenuTriggerFor]="menu2" class="mat-button-outline" color="primary">
+   <mat-icon> import_export</mat-icon> Export
+   <mat-icon>expand_more</mat-icon>
+ </button>
+ <mat-menu #menu2="matMenu">
+   <button mat-menu-item>Export as Excel </button>
+   <button mat-menu-item>Export as PDF</button>
+   <button mat-menu-item>Print</button>
+ </mat-menu>
+</span>
+
+     <span>
+ <button mat-button (click)="changeShowStatus()" class="mat-button-outline" color="primary">
+   <mat-icon>filter_list</mat-icon> Filters
+   <mat-icon>expand_more</mat-icon>
+ </button>
+
+</span>
+     <span pl-2>
+     <button mat-raised-button color="accent" (click)="createVisitDialog()">
+   <mat-icon>add</mat-icon> Create Visit</button>
+</span>
+ </p>

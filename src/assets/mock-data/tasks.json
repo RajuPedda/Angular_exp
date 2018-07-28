@@ -1,0 +1,568 @@
+[{
+    "columns": [{
+        "column 1": {
+            "key": "taskNo.",
+            "displayName": "task No."
+        },
+        "column2": {
+            "key": "taskForm",
+            "displayName": "task Form"
+        },
+        "column3": {
+            "key": "franchiseID",
+            "displayName": "Franchise ID"
+        },
+        "column4": {
+            "key": "creationDate",
+            "displayName": "Creation Date"
+        },
+        "column5": {
+            "key": "ScheduleDate",
+            "displayName": "Schedule Date"
+        },
+        "column6": {
+            "key": "consultant",
+            "displayName": "Consultant"
+        },
+        "column7": {
+            "key": "status",
+            "displayName": "Status"
+        },
+        "column8": {
+            "key": "consultantScore",
+            "displayName": "Consultant Score"
+        },
+        "column9": {
+            "key": "ownerScore",
+            "displayName": "Owner Score"
+        },
+        "column10": {
+            "key": "taskAssigned",
+            "displayName": "Task Assigned"
+        },
+        "column11": {
+            "key": "actionPlanCompletionDate",
+            "displayName": "Action Plan Completion Date"
+        },
+        "column12": {
+            "key": "action",
+            "displayName": "Action"
+        }
+    }],
+
+
+    "taskNumber": "VST809",
+    "taskForm": "VST201",
+    "franchiseId":"FRAN001",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+},
+{
+
+    "taskNumber": "VST810",
+    "taskForm": "VST202",
+    "franchiseId":"FRAN002",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+},
+{
+
+    "taskNumber": "VST811",
+    "taskForm": "VST203",
+    "franchiseId":"FRAN003",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+}
+,
+{
+
+    "taskNumber": "VST811",
+    "taskForm": "VST203",
+    "franchiseId":"FRAN003",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+},
+{
+
+    "taskNumber": "VST811",
+    "taskForm": "VST203",
+    "franchiseId":"FRAN003",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+},
+{
+
+    "taskNumber": "VST811",
+    "taskForm": "VST203",
+    "franchiseId":"FRAN003",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+},
+{
+
+    "taskNumber": "VST811",
+    "taskForm": "VST203",
+    "franchiseId":"FRAN003",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+},
+{
+
+    "taskNumber": "VST811",
+    "taskForm": "VST203",
+    "franchiseId":"FRAN003",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+},
+{
+
+    "taskNumber": "VST811",
+    "taskForm": "VST203",
+    "franchiseId":"FRAN003",
+    "creationDate": "03/28/2018",
+    "scheduleDate": "03/28/2018",
+    "consultant": "James",
+    "consultantScore":"60",
+    "taskAssigned":"--",
+    "auditDateTime": "03/23/2018",
+    "originalScheduleDateTime": "03/28/2018",
+    "taskStartDateTime": "03/23/2018",
+    "taskCompletionDateTime": "",
+    "privatePresent": "",
+    "status": "scheduled",
+    "formVersion": 1.0,
+    "formCycle": "Not Applicable",
+    "previousStatus": 0,
+    "franchiseeName": "001-Fran-Alabama",
+    "franchiseeNo": 148567786,
+    "statusValue": "In Process",
+    "franchiseeNoUsers": 546847628,
+    "taskId": 260815517,
+    "assignToName": "Alabama Coporate",
+    "assignTo": 1550417586,
+    "createdByName": "FranConnect Administrator",
+    "createdBy": 1,
+    "taskName": "Equipment Inspection",
+    "taskCount": 2,
+    "taskCountReports": 2,
+    "taskCountNoLinks": 2,
+    "franchiseeStatus": 1,
+    "formName": "Equipment Inspection",
+    "mastertaskId": 819928520,
+    "inspectionFormId": 819928520,
+    "formType": 1,
+    "formLayout": 1,
+    "ownerResponse": true,
+    "ownerSubmitted": "D",
+    "auditorSubmitted": "D",
+    "isFrantask": "",
+    "ownerScore": "--",
+    "ownerScoreLink": "--",
+    "ownerScoreLinkForReport": "--",
+    "ownerScoreSpan": "--",
+    "score": "25.00",
+    "actions": [{
+        "displayName": "Resume task"
+    }, {
+        "displayName": "task Summary as PDF"
+    }, {
+        "displayName": "Modify"
+    }, {
+        "displayName": "View Logs"
+    }]
+}
+
+
+]

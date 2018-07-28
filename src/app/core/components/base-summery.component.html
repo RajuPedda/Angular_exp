@@ -1,0 +1,338 @@
+
+<!-- Start of Body Content -->
+<mat-card class="no-shadows no-padding-top">
+    <!-- Start of Breadcrumbs -->
+    <div class="breadcrumbs">
+        <span>
+      <a href="">FieldOps</a>
+    </span>
+        <strong> Visits</strong>
+    </div>
+    <!-- End of Breadcrumbs -->
+    <mat-card-content fxLayout.gt-xs="row" fxLayout.xs="column">
+        <!-- Start of Page Title -->
+        <mat-card-title fxFlex="100%">Visit Summary</mat-card-title>
+        <!-- End of Page Title -->
+        <p fxFlex="auto" valign="center" fxLayout.gt-xs="row" fxLayout.xs="column" align="right" fxLayoutGap="8px">
+            <!-- <span>
+
+                <button mat-button [matMenuTriggerFor]="menu1" class="mat-button-outline"  color="primary">
+                    <mat-icon>format_list_bulleted</mat-icon> List view
+                    <mat-icon>expand_more</mat-icon>
+                </button>
+                <mat-menu #menu1="matMenu">
+                    <button mat-menu-item>List view </button>
+                    <button mat-menu-item>Timeline view</button>
+                    <button mat-menu-item>Kanbon view</button>
+                </mat-menu>
+         </span>
+
+            <span>
+        <button mat-button [matMenuTriggerFor]="menu2" class="mat-button-outline" color="primary">
+          <mat-icon> import_export</mat-icon> Export
+          <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #menu2="matMenu">
+          <button mat-menu-item>Export as Excel </button>
+          <button mat-menu-item>Export as PDF</button>
+          <button mat-menu-item>Print</button>
+        </mat-menu>
+      </span>
+
+            <span>
+        <button mat-button (click)="changeShowStatus()" class="mat-button-outline" color="primary">
+          <mat-icon>filter_list</mat-icon> Filters
+          <mat-icon>expand_more</mat-icon>
+        </button>
+
+      </span> -->
+            <span pl-2>
+            <button mat-raised-button color="accent" (click)="createVisitDialog()">
+          <mat-icon>add</mat-icon> Create Visit</button>
+      </span>
+        </p>
+    </mat-card-content>
+    <div *ngIf="showHide" style="position: relative;">
+        <div class="mat-filter">
+            <div fxLayout.gt-xs="row ' + wrapDirection" fxLayout.xs="column" fxLayoutGap="16px grid">
+                <span fxFlex="250px">
+        <label class="mat-lable-style">Visit number</label>
+        <input matInput placeholder="Enter Visit number" class="mat-textfield">
+      </span>
+                <span fxFlex="250px">
+        <label class="mat-lable-style">Visit Form</label>
+
+        <mat-select placeholder="Visit Form" [formControl]="VisitForm" multiple class="mat-selectfield">
+          <mat-option *ngFor="let VisitForm of VisitFormList" [value]="VisitForm">{{VisitForm}}</mat-option>
+        </mat-select>
+      </span>
+                <span fxFlex="250px">
+        <label class="mat-lable-style">Franchise ID</label>
+        <mat-select placeholder="Franchise ID" [formControl]="FranchiseID" multiple class="mat-selectfield">
+          <mat-option *ngFor="let FranchiseID of FranchiseIDList" [value]="VisitForm">{{FranchiseID}}</mat-option>
+        </mat-select>
+      </span>
+                <span fxFlex="250px">
+        <label class="mat-lable-style">Consultant</label>
+        <mat-select placeholder="Franchise ID" [formControl]="FranchiseID" multiple class="mat-selectfield">
+          <mat-option *ngFor="let FranchiseID of FranchiseIDList" [value]="VisitForm">{{FranchiseID}}</mat-option>
+        </mat-select>
+      </span>
+                <span fxFlex="250px">
+        <label class="mat-lable-style">Status</label>
+        <mat-select placeholder="Franchise ID" [formControl]="FranchiseID" multiple class="mat-selectfield">
+          <mat-option *ngFor="let FranchiseID of FranchiseIDList" [value]="VisitForm">{{FranchiseID}}</mat-option>
+        </mat-select>
+      </span>
+                <span fxFlex="250px">
+        <label class="mat-lable-style">Division</label>
+        <mat-select placeholder="Franchise ID" [formControl]="FranchiseID" multiple class="mat-selectfield">
+          <mat-option *ngFor="let FranchiseID of FranchiseIDList" [value]="VisitForm">{{FranchiseID}}</mat-option>
+        </mat-select>
+      </span>
+                <span fxFlex="250px">
+        <label class="mat-lable-style">Franchisee Consultant</label>
+        <mat-select placeholder="Franchise ID" [formControl]="FranchiseID" multiple class="mat-selectfield">
+          <mat-option *ngFor="let FranchiseID of FranchiseIDList" [value]="VisitForm">{{FranchiseID}}</mat-option>
+        </mat-select>
+      </span>
+                <span fxFlex="250px">
+        <label class="mat-lable-style">Operational Manager</label>
+        <mat-select placeholder="Franchise ID" [formControl]="FranchiseID" multiple class="mat-selectfield">
+          <mat-option *ngFor="let FranchiseID of FranchiseIDList" [value]="VisitForm">{{FranchiseID}}</mat-option>
+        </mat-select>
+      </span>
+
+            </div>
+            <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="8px grid">
+                <span>
+        <button mat-button color="primary">Clear</button>
+      </span>
+                <span>
+        <button mat-button color="primary">Save view</button>
+      </span>
+                <span>
+        <button mat-button color="primary">Apply</button>
+      </span>
+            </div>
+        </div>
+    </div>
+    <!-- Paging Start -->
+    <div fxLayout="row">
+        <div class="text-12" fxflex="auto">
+            <mat-icon class="icon-16">refresh</mat-icon> showing 1-50 of 659</div>
+        <div fxFlex align="center">
+            <div fxLayout="row" fxLayoutGap="12px" fxLayoutAlign="center center">
+                <a href="#" class="paging-button">
+                    <mat-icon>first_page</mat-icon>
+                </a>
+                <a href="#" class="paging-button">
+                    <mat-icon>chevron_left</mat-icon>
+                </a>
+                <a href="#" class="page-list">1</a>
+                <a href="#" class="page-list current-page">2</a>
+                <a href="#" class="page-list">3</a>
+                <a href="#" class="page-list">4</a>
+                <a href="#" class="page-list">5</a>
+                <a href="#" class="page-list">..</a>
+                <a href="#" class="page-list">14</a>
+                <a href="#" class="page-list">15</a>
+                <a href="#" class="paging-button">
+                    <mat-icon>chevron_right</mat-icon>
+                </a>
+                <a href="#" class="paging-button">
+                    <mat-icon>last_page</mat-icon>
+                </a>
+            </div>
+
+        </div>
+        <!-- Paging End -->
+
+        <div fxflex="auto">
+            <div fxLayout="row" fxLayoutAlign=" center" fxLayoutGap="12px">
+                <span>
+                    <button mat-button [matMenuTriggerFor]="Configure">Coloumns
+                        <mat-icon>arrow_drop_down</mat-icon>
+                      </button>
+                    <mat-menu #Configure="matMenu" style="width: 150px;" class="menu-text-sm">
+                        <p> <strong>Coloumns</strong><br> Restore Defaults</p>
+                        <p> <input matInput class="search" placeholder="Search.."></p>
+
+                        <mat-list role="list">
+                            <mat-list-item>
+                                <mat-checkbox> Visit Number</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox>Visit Form</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox>Franchisee ID</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox>Task Assigned</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox>Consultant Score</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox>Owner Score</mat-checkbox>
+                            </mat-list-item>
+                        </mat-list>
+                    </mat-menu>
+                </span>
+
+                <span fxFlex="70px">
+                        <mat-select [(value)]="selected">
+                                <mat-option value="option1">20</mat-option>
+                                <mat-option value="option2">50</mat-option>
+                                <mat-option value="option3">100</mat-option>
+                                <mat-option value="option4">300</mat-option>
+                                <mat-option value="option5">500</mat-option>
+                                <mat-option value="option6">all</mat-option>
+                           </mat-select>
+
+                </span>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="scroll-table">
+        <table width="100%" border="0" cellspacing="0" cellpadding="3" class="table-style">
+            <thead>
+                <tr>
+                    <th width="2%" align="left" class="no-sort">
+                        <mat-checkbox></mat-checkbox>
+                    </th>
+                    <th width="5%" align="left">
+                        <mat-icon class="drag">more_vert</mat-icon> Visit No.
+
+                    </th>
+                    <th width="5%" align="left">
+                        <mat-icon class="drag">more_vert</mat-icon> Visit Form
+
+                    </th>
+                    <th width="5%" align="left">
+                        <mat-icon class="drag">more_vert</mat-icon> Status
+
+                    </th>
+                    <th width="5%" align="left">
+                        <mat-icon class="drag">more_vert</mat-icon> Franchise ID
+                        <mat-icon class="sorting">arrow_downward</mat-icon>
+                    </th>
+                    <th width="5%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Task Assigned
+
+                    </th>
+                    <th width="5%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Visit Start Date
+
+                    </th>
+                    <th width="5%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Schedule Date
+
+                    </th>
+                    <th width="5%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Consultant Score(%)
+
+                    </th>
+                    <th width="5%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Owner Score(%)
+
+                    </th>
+                    <th width="7%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Visit Completion Date
+
+                    </th>
+                    <th width="5%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Creation Date
+
+                    </th>
+                    <th width="10%" align="left" class=""> Consultant
+
+
+                    </th>
+                    <th width="7%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Original Schedule Date
+
+                    </th>
+                    <th width="7%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Visit Modified Date
+
+                    </th>
+                    <th width="7%" align="left" class="">
+                        <mat-icon class="drag">more_vert</mat-icon> Action Plan Completion Date
+
+                    </th>
+                    <th width="5%" align="right" class="no-sort">
+                        <button mat-icon-button [matMenuTriggerFor]="menu">
+                                    <mat-icon>more_horiz</mat-icon>
+                                  </button>
+                        <mat-menu class="menu-text-sm" #menu="matMenu">
+                            <button mat-menu-item> Modify</button>
+                            <button mat-menu-item>Detailed History</button>
+                            <button mat-menu-item>Send Email</button>
+                            <button mat-menu-item>Log a Task</button>
+                            <button mat-menu-item> Log a Call</button>
+                            <button mat-menu-item> Add Remarks</button>
+                        </mat-menu>
+                    </th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let visit of summeryData">
+                <tr>
+                    <td align="left">
+                        <mat-checkbox></mat-checkbox>
+                    </td>
+                    <td align="left" class="icon-inline"><a href="#" class="link-text">{{visit.visitNumber}}</a>
+                        <span class="status-icon"><mat-icon class="text-blue" matTooltip="Good" matTooltipPosition="right">lens</mat-icon></span>
+
+                    </td>
+                    <td align="left"> VST201</td>
+                    <td align="left">
+                        <mat-chip class="outline-chip cyan-chip">Scheduled</mat-chip>
+                    </td>
+                    <td align="left"><a href="#">FRAN001</a></td>
+                    <td align="left"> James</td>
+                    <td align="left"> 12 Apr 2018</td>
+                    <td align="left"> 10 Apr 2018</td>
+                    <td align="left" class="text-red"> 25.555 </td>
+                    <td align="left" class="text-green"> 50.555</td>
+                    <td align="left"> 10 Apr 2018</td>
+                    <td align="left"> 10 Apr 2018</td>
+                    <td align="left"> Lorem Ipsum</td>
+                    <td align="left"> 10 Apr 2018</td>
+                    <td align="left"> 10 Apr 2018</td>
+                    <td align="left"> 10 Apr 2018</td>
+                    <td align="right"> <button mat-icon-button [matMenuTriggerFor]="menu">
+                            <mat-icon>more_horiz</mat-icon>
+                          </button>
+                        <mat-menu class="menu-text-sm" #menu="matMenu">
+                            <button mat-menu-item> Modify</button>
+                            <button mat-menu-item>Detailed History</button>
+                            <button mat-menu-item>Send Email</button>
+                            <button mat-menu-item>Log a Task</button>
+                            <button mat-menu-item> Log a Call</button>
+                            <button mat-menu-item> Add Remarks</button>
+                        </mat-menu>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+</mat-card>
+
+<!-- End of Body Content -->

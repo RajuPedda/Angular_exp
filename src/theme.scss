@@ -1,0 +1,413 @@
+@import '../node_modules/@angular/material/theming';
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../node_modules/primeng/resources/themes/omega/theme.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+@include mat-core();
+$title-font:'Source Sans Pro',
+sans-serif;
+$black100: rgba(0,
+0,
+0,
+1);
+$black87: rgba(0,
+0,
+0,
+.87);
+$black54: rgba(0,
+0,
+0,
+.54);
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/*--------Start Mat card---------*/
+
+.mat-card {
+    padding: 16px;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 400;
+}
+
+.mat-card-title {
+    font-size: 28px;
+    font-family: $title-font;
+    font-weight: 400;
+}
+
+.page-header.mat-card {
+    margin-bottom: 8px;
+}
+
+.mat-row {
+    border-bottom-color: transparent;
+}
+
+.no-shadows {
+    box-shadow: none !important;
+}
+/*--------End Mat Card----*/
+/* Start Breadcrumbs */
+
+.breadcrumbs {
+    color: $black87;
+    display: block;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: $black87;
+}
+
+.breadcrumbs span:after {
+    content: "/";
+    display: inline;
+    padding: 0 8px;
+}
+/*----End breadcrumbs----*/
+/*------start button style---------*/
+
+.mat-icon.material-icons {
+    color: #505050;
+}
+
+.mat-raised-button.mat-accent {
+    background: #4caf50;
+    height: 42px;
+    line-height: 42px;
+    box-shadow: none !important;
+}
+
+.mat-raised-button.mat-accent .mat-icon.material-icons {
+    color: #fff;
+}
+
+.mat-button-outline {
+    border: 1px solid #edf2fc !important;
+    border-radius: 2px !important;
+    font-weight: normal;
+    color: $black87 !important;
+    line-height: 42px !important;
+}
+
+.mat-button-outline:hover {
+    background: #edf2fc !important;
+}
+/*-------end Button style-----*/
+/*-------Start Form Style---------*/
+
+.mat-textfield {
+    font-size: 14px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #acacad;
+    border-radius: 2px;
+}
+
+.mat-lable-style {
+    font-size: 14px;
+    padding-bottom: 8px;
+    display: block;
+}
+
+.mat-selectfield {
+    font-size: 14px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #acacad;
+    border-radius: 2px;
+}
+/* end Form Style------*/
+/* mat card popup */
+
+.table-style a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.link-text {
+    color: #007aff;
+    text-decoration: none;
+}
+
+.mat-dialog-container {
+    padding: 0 !important;
+}
+
+.mat-card-popup {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: inherit !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100%;
+}
+
+.mat-card-popup .mat-card-footer,
+.mat-card-popup .mat-card-actions,
+.mat-card-popup .mat-card-header-text {
+    margin: 0 !important
+}
+
+.mat-card-popup .mat-card-header {
+    padding: 16px;
+    background: #f2f2f2;
+    min-height: 54px;
+    box-sizing: border-box;
+}
+
+.mat-card-popup .mat-card-content {
+    padding: 16px;
+    flex: 2;
+}
+
+.mat-card-popup .mat-card-footer {
+    padding: 9px 16px;
+    background: #f2f2f2;
+    min-height: 54px;
+    box-sizing: border-box;
+}
+
+.mat-card-popup .mat-card-title {
+    font-size: 18px;
+    margin: 0;
+    font-family: $title-font;
+}
+/*-------Start Select Button------*/
+
+.ui-button-text-only .ui-button-text {
+    padding: 10px 24px;
+}
+
+.ui-selectbutton .ui-button.ui-state-default {
+    border: 1px solid #007aff;
+    color: #007aff;
+    border-right: 0;
+}
+
+.ui-selectbutton .ui-button:not(.ui-state-disabled):not(.ui-state-active):hover {
+    border: 1px solid #007aff;
+    color: #007aff;
+    background: #fff;
+    border-right: 0;
+}
+
+.ui-selectbutton .ui-button.ui-state-active {
+    background: #007aff;
+    color: #fff;
+    border-right: 0;
+}
+
+.ui-selectbutton>.ui-button:last-child {
+    border-right: 1px solid #007aff !important;
+}
+/*----Start ui-inputgroup----*/
+
+.ui-inputgroup>input {
+    font-size: 14px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #acacad;
+    margin-top: 0px;
+    border-radius: 2px 0 0 2px;
+}
+
+.ui-inputgroup .ui-inputgroup-addon {
+    width: 46px;
+    box-sizing: border-box;
+    border: 1px solid #acacad;
+    background: #fff;
+    border-left: 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.ui-inputgroup .ui-inputgroup-addon i {
+    line-height: 22px;
+}
+/*----End input Group-------*/
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background: #007aff;
+}
+
+.mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
+    background-color: rgba(0, 122, 255, 0.1803921568627451);
+}
+/* table style */
+
+.menu-text-sm .mat-menu-item {
+    font-size: 12px !important;
+    height: auto !important;
+    line-height: 30px
+}
+
+.menu-text-sm .mat-checkbox-layout .mat-checkbox-label {
+    font-size: 12px !important;
+}
+
+.menu-text-sm .mat-list .mat-list-item {
+    height: auto;
+    margin-top: 12px;
+}
+
+.scroll-table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    border: 1px solid #ececec;
+}
+
+.table-style tr>th {
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-weight: 700;
+    background: #f5f5f5;
+}
+
+.table-style tr>td {
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.status-icon {
+    position: absolute;
+    right: 0;
+}
+
+.status-icon .mat-icon {
+    font-size: 12px;
+}
+
+.status-icon .lock-icon {
+    font-size: 18px;
+}
+
+.icon-inline {
+    padding-right: 60px !important;
+    position: relative;
+}
+
+.text-red {
+    color: #ec544e !important;
+}
+
+.text-green {
+    color: #0d8d00 !important;
+}
+
+.text-blue {
+    color: #68c3ef !important;
+}
+
+.text-yellow {
+    color: #fabb3f !important
+}
+
+.outline-chip {
+    background: transparent !important;
+    border: 1px solid #007aff;
+    color: #007aff !important;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.table-style .outline-chip {
+    display: block;
+}
+
+.orange-chip {
+    border-color: #f79647 !important;
+    color: #f79647 !important;
+}
+
+.cyan-chip {
+    border-color: #00a7b5 !important;
+    color: #00a7b5 !important;
+}
+
+.mat-icon.drag {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.mat-icon.sorting {
+    font-size: 16px;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+// pagination
+.page-list {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .87);
+    font-weight: 700;
+    padding: 3px 7px 5px 5px;
+    border-radius: 2px;
+    height: 24px;
+    box-sizing: border-box;
+}
+
+.page-list:hover {
+    background: rgba(0, 0, 0, .54);
+    color: #fff;
+}
+
+.page-list.current-page {
+    background: #007aff;
+    color: #fff;
+}
+
+.paging-button .mat-icon {
+    color: #000!important
+}
+
+.icon-16 {
+    font-size: 16px;
+    width: auto !important;
+    height: auto !important;
+    vertical-align: middle;
+}
+
+.text-12 {
+    font-size: 12px;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.mat-filter {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    margin: 0 -14px;
+}
+
+.mat-menu-content button.mat-menu-item {
+    font-size: 14px;
+    height: auto
+}

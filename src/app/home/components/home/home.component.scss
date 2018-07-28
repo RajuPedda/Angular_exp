@@ -1,0 +1,33 @@
+.example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .example-sidenav {
+    padding: 20px;
+  }
+  .white-icon {
+    color: #ffffff;
+   }
+
+   .green-icon {
+    color: #63a70a;
+   }
+   .red-icon {
+    color: #e8242e;
+   }
+
+   .green-text{color: #63a70a;}
+   .red-text{color: #e8242e;}
+
+.mainContainer{}
+   .multi-icons .mat-icon.right{right:0px; position: absolute;}
+   .multi-icons .mat-icon.left{margin-right:16px;}

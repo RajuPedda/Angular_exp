@@ -1,0 +1,60 @@
+<mat-card class="mat-card-popup">
+    <mat-card-header>
+        <mat-card-title>Create Visit</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            <label class="mat-lable-style">Visit Form</label>
+            <mat-select placeholder="Visit Form" multiple class="mat-selectfield">
+                <mat-option *ngFor="let VisitForm of VisitFormList" [value]="VisitForm">{{VisitForm}}</mat-option>
+            </mat-select>
+        </p>
+        <p>
+            <label class="mat-lable-style">Franchisee ID</label>
+            <mat-select placeholder="Visit Form"  multiple class="mat-selectfield">
+                <mat-option *ngFor="let VisitForm of VisitFormList" [value]="VisitForm">{{VisitForm}}</mat-option>
+            </mat-select>
+        </p>
+
+        <p>
+            <label class="mat-lable-style">Consultant</label>
+            <mat-select placeholder="Visit Form" multiple class="mat-selectfield">
+                <mat-option *ngFor="let VisitForm of VisitFormList" [value]="VisitForm">{{VisitForm}}</mat-option>
+            </mat-select>
+        </p>
+
+        <p>
+            <p-selectButton [options]="types" ></p-selectButton>
+
+        </p>
+
+        <p>
+            <label class="mat-lable-style">Schedule Date and Time</label>
+            <span class="ui-inputgroup">
+                <input matInput [matDatepicker]="picker" class="mat-datepicker">
+                <span class="ui-inputgroup-addon" (click)="picker.open()"><i class="fa fa-calendar"></i></span>
+            <mat-datepicker #picker></mat-datepicker>
+            </span>
+
+        </p>
+
+        <p>
+            <mat-checkbox> Send visit notification email to Franchisee Owner</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox> Send visit completion email to Franchisee Owner</mat-checkbox>
+        </p>
+
+
+
+
+
+
+
+
+    </mat-card-content>
+    <mat-card-footer align="right">
+        <button mat-button>Cancel</button>
+        <button mat-raised-button color="accent">Submit</button>
+    </mat-card-footer>
+</mat-card>

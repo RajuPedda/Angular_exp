@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+
+body, .mat-tab-label,.mat-tab-body,.mat-form-field,p,span,button,.mat-subheading-2, div {
+  font-family: 'Lato', sans-serif !important;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px !important;
+    font-weight: 400;
+    background-color: #ececed !important;
+    }
+   .mat-drawer-container{background: none;}
+   .mat-card{background: #ffffff; margin:0 0 16px 0;}
+   .mat-card:hover{box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)!important;}
+
+   .mat-card-title, .header-2 {
+    font-size: 24px !important;
+    font-family: 'Source Sans Pro',sans-serif;
+    }
+    .mat-list-item-content{color:#ffffff;}
+    .mat-card-content img.chart{width:100%;height:auto;}
+
+
+   .pageContent {
+    padding: 16px;
+}
+.mat-card-header .mat-card-header-text{flex: 2; margin: 0;}
+.mat-card-header .mat-icon-button{opacity: 0.54 !important; margin-top: -8px;}
+.mat-card-header .mat-icon-button:last-child{margin-right: -8px;}
+.mat-icon-button{background: none !important;}
+.no-hover{background: none!important;}
+.component-page-header {
+    display: flex;
+    align-items: top;
+    padding-left: 0;
+    padding:8px 0 24px 0;
+  }
+  .component-page-header h1{padding:0; margin:0; font-weight: normal; font-family: 'Source Sans Pro',sans-serif; font-size: 45px; line-height: 40px;}
+  .component-page-header .docs-primary-name{flex: 2;}
+  .component-page-header .docs-primary-name .caption-18{font-size: 18px; line-height: 24px;}
+
+  .mat-fab.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+    background-color: #63a70a; color: #ffffff;
+}
+.muted-text{opacity: 0.54;}
+.mat-menu-item{background: #ffffff;}
+
+.margin-left{margin-left: 16px !important;}
+.margin-right{margin-right: 16px !important;}
+.margin-top{margin-top: 16px !important;}
+.margin-bottom{margin-bottom: 16px !important;}
+.no-margin{margin: 0px !important;}
+
+.padding-left{padding-left: 16px !important;}
+.padding-right{padding-right: 16px !important;}
+.padding-top{padding-top: 16px !important;}
+.padding-bottom{padding-bottom: 16px !important;}
+.no-padding{padding: 0px !important;}
+
+.mat-display-0{font-size: 30px; font-family: 'Lato', sans-serif !important;}
+.mat-subheading-2{line-height: 14px;}
+
+.mat-tab-label{font-size: 15px!important;}
+.mat-tab-label-active{background-color: rgba(197,202,233,.3);}
+.mat-menu-item{font-size: 15px!important;}
+.demo-tab-content {
+  padding: 24px 0;
+}
+.mat-form-field{width:100%;}
+.title-center{
+  flex: 1 1 auto;
+  text-align: center;
+}
+button.mat-button{margin-right: 8px;}
+.xc div{border:1px solid #ccc;}
+
+
+
+
+.mat-table {
+  overflow: auto;
+  max-height: 310px;
+}
+
+.mat-select-box .mat-form-field{border: 1px solid #cccccc; border-radius: 2px; background: #fff; padding:5px 10px; box-sizing: border-box;}
+.mat-select-box .mat-form-field.auto-width{width:auto;}
+.mat-select-box .mat-form-field.no-border{border:none;}
+.mat-select-box .mat-form-field-wrapper{padding-bottom: 0;}
+.mat-select-box .mat-form-field-infix{border-top:0!important; font-size:14px !important;}
+.mat-select-box .span{font-size:14px !important;}
+.mat-select-box .mat-select-value-text{font-size:14px !important;}
+.mat-select-box .mat-form-field-underline{bottom:0!important; background: none!important; height: 0!important;}
+.mat-select-box .mat-form-field-ripple{bottom:0!important; background: none!important; height: 0!important;}
+
+//----------------- sm media screen----------------------
+
+.mat-raised-button.sm-button{min-width: auto !important;padding: 0 8px;}
+.sm-button-text-hide{display:none;}
